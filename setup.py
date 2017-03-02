@@ -4,10 +4,11 @@ import sys
 import os
 from setuptools import setup
 from setuptools.command.test import test as TestCommand
+COMPAT_LIBS = []
 if sys.version_info[0] == 2:
     # get the Py3K compatible `encoding=` for opening files.
-	from io import open
-
+    from io import open
+    COMPAT_LIBS.append("backports.shutil_get_terminal_size>=1.0.0")
 
 HERE = os.path.abspath(os.path.dirname(__file__))
 
@@ -61,7 +62,7 @@ setup(
     include_package_data=True,
     install_requires=[
         "Django>=1.8",
-    ],
+    ] + COMPAT_LIBS,
     tests_require=[
         "pytest>=2.6",
         "pytest-django>=2.8.0,<3.0.0",
