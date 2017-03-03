@@ -1,0 +1,12 @@
+<tr>
+    <td>{{ url.module }}.{{ url.view }}</td>
+    <td>
+    <code>{% if url.namespace %}{% for part in url.namespace %}{{ part }}:{% endfor %}{% endif %}{% if url.name %}{{ url.name }}{% endif %}</code>
+    {% if url.named_url_kwargs %}
+        <code>({{ url.named_url_kwargs|join:", " }})</code>
+    {% endif %}
+    </td>
+    <td>
+        {% if '<' not in url.url %}<a href="{{ url.url }}">{{ url.url }}</a>{% else %}<code>{{ url.url }}</code>{% endif %}
+    </td>
+</tr>
