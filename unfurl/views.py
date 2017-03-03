@@ -23,8 +23,8 @@ class SearchForm(Form):
 
     def filter(self):
         if self.is_valid():
-            for url in self.urls:
-                for user_filter in self.cleaned_data['text']:
+            for user_filter in self.cleaned_data['text']:
+                for url in self.urls:
                     # look for character or partial or full match somewhere in the
                     # string of the set()
                     if user_filter in url['textsearch']:
