@@ -14,7 +14,7 @@ class SearchForm(Form):
 
     def __init__(self, urls, *args, **kwargs):
         super(SearchForm, self).__init__(*args, **kwargs)
-        self.urls = (urls)
+        self.urls = urls
 
     def clean_text(self):
         text = self.cleaned_data['text']
@@ -38,11 +38,7 @@ def urls_list(request):
     all_urls = get_urls(settings.ROOT_URLCONF)
     form = SearchForm(data=request.GET or None, initial=None, urls=all_urls)
     urls = form.filter()
-    viewname_template = request.resolver_match.view_name.replace(':', '/')
-    template = (
-        '{}.html'.format(viewname_template),
-        "unfurl/urls_list.html",
-    )
+    template = "unfurl/urls_list.html"
     context = {
         'urlconf': urls,
         'form': form,

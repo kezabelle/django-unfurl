@@ -24,7 +24,7 @@ class Command(BaseCommand):
     can_import_settings = True
     def handle(self, *args, **kwargs):
         from django.conf import settings
-        all_urls = tuple(get_urls(settings.ROOT_URLCONF))
+        all_urls = get_urls(settings.ROOT_URLCONF)
         output = StringIO()
         for url in all_urls:
             uri = "URL: " + self.style.HTTP_REDIRECT(url['url'])
