@@ -1,6 +1,14 @@
 {% extends "unfurl/base.html" %}
 
 {% block content %}
+<div class="well well-sm">
+<form action="" method="GET" accept-charset="utf-8" autocomplete="off" novalidate class="form-inline">
+    <div class="form-group">
+    <input type="text" class="form-control" id="{{ form.text.id }}" name="{{ form.text.html_name }}" placeholder="Filter results" value="{% if form.text.value %}{{ form.text.value }}{% endif %}">
+        </div>
+        <button type="submit" class="btn btn-primary">Filter</button>
+</form>
+</div>
 <table class="table table-hover table-striped">
 <thead>
 <tr>
