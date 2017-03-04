@@ -9,6 +9,7 @@ help:
 clean-build:
 	rm -fr build/
 	rm -fr htmlcov/
+	rm -fr .tox/
 	rm -fr dist/
 	rm -fr .eggs/
 	find . -name '*.egg-info' -exec rm -fr {} +
