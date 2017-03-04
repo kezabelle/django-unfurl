@@ -2,9 +2,9 @@ django-unfurl
 ================================
 
 :author: Keryn Knight
-:version: 0.1.0
+:version: 0.1.1
 
-.. |travis_stable| image:: https://travis-ci.org/kezabelle/django-unfurl.svg?branch=0.1.0
+.. |travis_stable| image:: https://travis-ci.org/kezabelle/django-unfurl.svg?branch=0.1.1
   :target: https://travis-ci.org/kezabelle/django-unfurl
 
 .. |travis_master| image:: https://travis-ci.org/kezabelle/django-unfurl.svg?branch=master
@@ -13,7 +13,7 @@ django-unfurl
 ==============  ======
 Release         Status
 ==============  ======
-stable (0.1.0)  |travis_stable|
+stable (0.1.1)  |travis_stable|
 master          |travis_master|
 ==============  ======
 
