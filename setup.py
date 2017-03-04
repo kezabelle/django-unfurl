@@ -39,12 +39,14 @@ def make_readme(root_path):
                 yield f.read()
 
 LICENSE = "BSD License"
-URL = ""
+URL = "https://github.com/kezabelle/django-unfurl"
 LONG_DESCRIPTION = "\r\n\r\n----\r\n\r\n".join(make_readme(HERE))
-SHORT_DESCRIPTION = ""
+SHORT_DESCRIPTION = "A small re-usable app for Django to output all the URLs used in a project"
 KEYWORDS = (
     "django",
     "unfurl",
+    "urls",
+    "urlconf",
 )
 
 setup(
