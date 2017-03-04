@@ -1,5 +1,15 @@
-htmlcov
-dist
+.Python
+.eggs/
+bin/
+include/
+lib/
+pip-selfcheck.json
+share/
+.tox/
+dist/
+htmlcov/
+build/
+.cache
 *.pyo
 *.pyc.coverage
 *.egg*
