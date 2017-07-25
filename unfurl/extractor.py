@@ -2,8 +2,11 @@
 from __future__ import absolute_import, unicode_literals
 import re
 import django
-from django.contrib.admindocs.views import (simplify_regex, named_group_matcher,
-                                            non_named_group_matcher)
+from django.contrib.admindocs.views import simplify_regex
+try:
+    from django.contrib.admindocs.views import named_group_matcher, non_named_group_matcher
+except ImportError:
+    from django.contrib.admindocs.utils import named_group_matcher, unnamed_group_matcher as non_named_group_matcher
 try:
     from importlib import import_module
 except ImportError:
